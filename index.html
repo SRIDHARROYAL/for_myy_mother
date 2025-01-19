@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generative AI Roadmap</title>
+  <style>
+   /* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f4f4f9, #e9eef5);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  color: #34495e;
+  margin-top: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  font-size: 2.5rem;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto 50px auto;
+}
+
+/* Phase Box */
+.phase {
+  background: linear-gradient(135deg, #ffffff, #f9f9fb);
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.phase:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Phase Header */
+.phase-header {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #2c3e50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.phase-header:hover {
+  color: #2980b9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Phase Header Icon */
+.icon {
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
+}
+
+.icon.rotate {
+  transform: rotate(90deg);
+}
+
+/* Content */
+.content {
+  display: none;
+  padding-top: 15px;
+  font-size: 1rem;
+  color: #2c3e50;
+  line-height: 1.8;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 10px;
+}
+
+.content ul {
+  margin: 15px 0 0 20px;
+}
+
+.content li {
+  margin-bottom: 10px;
+}
+
+.content li:hover {
+  color: #2980b9;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Checkboxes */
+.checkbox {
+  margin-right: 10px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Progress Tracker */
+.progress-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.progress {
+  background: #e0e0e0;
+  border-radius: 50px;
+  height: 25px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  transition: width 0.4s ease;
+  border-radius: 50px;
+}
+
+.progress-text {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #34495e;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .phase-header {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    font-size: 0.95rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <h1>Generative AI Roadmap</h1>
+  <div class="container">
+    <!-- Progress Tracker -->
+    <div class="progress-container">
+      <div class="progress">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <p class="progress-text" id="progress-text">Progress: 0%</p>
+    </div>
+
+    <!-- All Phases -->
+    <div class="phase">
+      <div class="phase-header">
+        <span>Phase 1: Foundational Skills</span>
+        <span class="icon">&#9654;</span>
+      </div>
+      <div class="content">
+        <ul>
+          <li><input type="checkbox" class="checkbox" /> Learn Basic LLM Concepts:
+            <ul>
+              <li>Understand Transformer architecture (encoders, decoders).</li>
+              <li>Study tokenization, attention mechanisms, temperature, and penalties.</li>
+              <li>Explore OpenAI Playground to tweak parameters and observe changes.</li>
+            </ul>
+          </li>
+          <li><input type="checkbox" class="checkbox" /> Learn Python (Essential for AI):
+            <ul>
+              <li>Basics: Data types, loops, functions, and object-oriented programming.</li>
+              <li>Libraries: NumPy, Pandas, Matplotlib, and Scikit-learn.</li>
+              <li>AI-specific libraries: Hugging Face, TensorFlow, and PyTorch.</li>
+            </ul>
+          </li>
+          <li><input type="checkbox" class="checkbox" /> Understand API Usage:
+            <ul>
+              <li>Learn to access LLMs through APIs (OpenAI, Hugging Face).</li>
+              <li>Familiarize yourself with RESTful APIs for integration.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-header">
+        <span>Phase 2: Core AI Development</span>
+        <span class="icon">&#9654;</span>
+      </div>
+      <div class="content">
+        <ul>
+          <li><input type="checkbox" class="checkbox" /> Prompt Engineering:
+            <ul>
+              <li>Learn single-shot, few-shot, and advanced prompting techniques.</li>
+              <li>Understand backend prompt optimization (for wrapping queries).</li>
+              <li>Practice creating effective prompts for custom use cases.</li>
+            </ul>
+          </li>
+          <li><input type="checkbox" class="checkbox" /> Learn RAG Basics:
+            <ul>
+              <li>Introduction to Retrieval-Augmented Generation (RAG).</li>
+              <li>Integrate knowledge bases with LLMs for context-aware responses.</li>
+              <li>Tools: Pinecone or Weaviate for vector database management.</li>
+            </ul>
+          </li>
+          <li><input type="checkbox" class="checkbox" /> Develop Basic LLM Applications:
+            <ul>
+              <li>Build simple apps using LangChain and LlamaIndex.</li>
+              <li>Example: A Q&A chatbot integrated with your data.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-header">
+        <span>Phase 3: Intermediate Development</span>
+        <span class="icon">&#9654;</span>
+      </div>
+      <div class="content">
+        <ul>
+          <li><input type="checkbox" class="checkbox" /> Advanced RAG Techniques:
+            <ul>
+              <li>Understand limitations of basic RAG and improve accuracy.</li>
+              <li>Implement custom datasets for more robust RAG pipelines.</li>
+              <li>Create an employee manual bot with up-to-date company policies.</li>
+            </ul>
+          </li>
+          <li><input type="checkbox" class="checkbox" /> Basic Deployment Skills:
+            <ul>
+              <li>Learn to deploy apps using Streamlit, Flask, or FastAPI.</li>
+              <li>Understand containerization with Docker.</li>
+              <li>Deploy on cloud platforms (AWS, Azure, GCP).</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-header">
+        <span>Phase 4: Advanced LLM Development</span>
+        <span class="icon">&#9654;</span>
+      </div>
+      <div class="content">
+        <ul>
+          <li><input type="checkbox" class="checkbox" /> Fine-Tuning Techniques:
+            <ul>
+              <li>Parameter-Efficient Fine-Tuning (e.g., QLoRA, LoRA).</li>
+              <li>Full Fine-Tuning for niche domains like healthcare or finance.</li>
+            </ul>
+          </li>
+          <li><input type="checkbox" class="checkbox" /> Alignment and Evaluation:
+            <ul>
+              <li>Reinforcement Learning with Human Feedback (RLHF).</li>
+              <li>Adversarial testing to ensure model safety.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-header">
+        <span>Phase 5: Advanced Deployment & Research</span>
+        <span class="icon">&#9654;</span>
+      </div>
+      <div class="content">
+        <ul>
+          <li><input type="checkbox" class="checkbox" /> Advanced Deployment Techniques:
+            <ul>
+              <li>Use Kubernetes for scaling AI apps.</li>
+              <li>Implement monitoring tools for real-time performance tracking.</li>
+            </ul>
+          </li>
+          <li><input type="checkbox" class="checkbox" /> Research and Open-Source Contributions:
+            <ul>
+              <li>Work on projects like Hugging Face or LangChain pipelines.</li>
+              <li>Share insights via GitHub and blogs.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle Content
+    const phaseHeaders = document.querySelectorAll(".phase-header");
+    phaseHeaders.forEach(header => {
+      header.addEventListener("click", () => {
+        const content = header.nextElementSibling;
+        const icon = header.querySelector(".icon");
+        content.style.display = content.style.display === "block" ? "none" : "block";
+        icon.classList.toggle("rotate");
+      });
+    });
+
+    // Progress Tracker
+    const checkboxes = document.querySelectorAll(".checkbox");
+    const progressBar = document.getElementById("progress-bar");
+    const progressText = document.getElementById("progress-text");
+
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener("change", () => {
+        const completed = Array.from(checkboxes).filter(box => box.checked).length;
+        const total = checkboxes.length;
+        const progress = Math.round((completed / total) * 100);
+        progressBar.style.width = `${progress}%`;
+        progressText.textContent = `Progress: ${progress}%`;
+      });
+    });
+  </script>
+</body>
+</html>
