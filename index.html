@@ -6,6 +6,7 @@
   <title>Generative AI Roadmap</title>
   <style>
    /* General Styles */
+/* General Styles */
 body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(135deg, #f4f4f9, #e9eef5);
@@ -84,23 +85,33 @@ h1 {
   margin-top: 10px;
 }
 
+/* List Formatting */
 .content ul {
-  margin-top: 10px;
-  margin-left: 15px;
+  list-style-type: disc;
+  margin: 10px 0 0 25px; /* Adjusts indentation for sub-lists */
+  padding-left: 0;
+}
+
+.content ul ul {
+  list-style-type: circle; /* Nested list styling */
+  margin: 5px 0 0 20px; /* Further indentation for nested lists */
 }
 
 .content li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  line-height: 1.5; /* Spacing between lines for better readability */
 }
 
 .content li:hover {
   color: #2980b9;
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-/* Checkboxes */
+/* Checkbox Alignment */
 .checkbox {
-  margin-right: 8px;
+  vertical-align: middle;
+  margin-right: 10px;
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -135,7 +146,7 @@ h1 {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Styles for Mobile */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   h1 {
     font-size: 1.8rem;
@@ -149,8 +160,16 @@ h1 {
     padding: 10px;
   }
 
-  .content {
-    font-size: 0.85rem;
+  .content ul {
+    margin-left: 20px; /* Adjust for smaller screens */
+  }
+
+  .content ul ul {
+    margin-left: 15px; /* Further indentation for nested lists */
+  }
+
+  .content li {
+    font-size: 0.9rem;
   }
 
   .checkbox {
